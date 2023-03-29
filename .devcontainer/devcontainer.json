@@ -4,6 +4,10 @@
     // Use a basic core Linux image as basic template.
     // See https://containers.dev/templates for all containers(base)
     "image": "mcr.microsoft.com/devcontainers/base:debian",
+    // "build": {
+    //     "context": "..",
+    //     "dockerfile": "Dockerfile"
+    // },
     // See https://containers.dev/features for all features(addons)
     "features": {
         // "ghcr.io/devcontainers/features/anaconda:1": {},
