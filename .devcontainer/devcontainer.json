@@ -43,11 +43,7 @@
         // "ghcr.io/devcontainers/features/oryx:1": {},
         // "ghcr.io/devcontainers/features/php:1": {},
         // "ghcr.io/devcontainers/features/powershell:1": {},
-        // "ghcr.io/devcontainers/features/python:1": {
-        //     "version": "3.10",
-        //     "installPath": "/usr/local/python",
-        //     "optimize": true
-        // },
+        // "ghcr.io/devcontainers/features/python:1": {},
         // "ghcr.io/devcontainers/features/ruby:1": {},
         // "ghcr.io/devcontainers/features/rust:1": {},
         "ghcr.io/devcontainers/features/sshd:1": {},
@@ -66,7 +62,6 @@
             "extensions": [
                 "GitHub.copilot",
                 // "eg2.vscode-npm-script",
-                // "ms-azuretools.vscode-docker",
                 // "ms-python.python",
                 // "ms-python.pylint",
                 // "ms-python.flake8",
