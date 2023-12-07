@@ -27,7 +27,7 @@
         // "ghcr.io/devcontainers/features/docker-outside-of-docker:1": {},
         // "ghcr.io/devcontainers/features/dotnet:1": {},
         "ghcr.io/devcontainers/features/git:1": {},
-        "ghcr.io/devcontainers/features/git-lfs:1": {},
+        // "ghcr.io/devcontainers/features/git-lfs:1": {},
         // "ghcr.io/devcontainers/features/github-cli:1": {},
         // "ghcr.io/devcontainers/features/go:1": {},
         // "ghcr.io/dhoeric/features/google-cloud-cli:1": {},
@@ -66,29 +66,19 @@
             "extensions": [
                 "GitHub.copilot",
                 // "eg2.vscode-npm-script",
-                "ms-azuretools.vscode-docker",
-                "ms-python.python",
-                "ms-python.isort",
-                "ms-python.pylint",
-                "ms-python.vscode-pylance",
+                // "ms-azuretools.vscode-docker",
+                // "ms-python.python",
+                // "ms-python.pylint",
+                // "ms-python.flake8",
+                // "ms-python.autopep8",
+                // "ms-python.black-formatter",
+                // "ms-python.isort",
+                // "ms-python.vscode-pylance",
                 "MS-vsliveshare.vsliveshare-pack"
             ],
             // Set *default* container specific settings.json values on container create.
             "settings": {
-                "python.defaultInterpreterPath": "/usr/local/python/bin/python",
-                "python.formatting.provider": "black",
-                "python.languageServer": "Pylance",
-                "python.linting.enabled": true,
-                "python.linting.pylintEnabled": true,
-                "python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
-                "python.formatting.blackPath": "/usr/local/py-utils/bin/black",
-                "python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
-                "python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
-                "python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
-                "python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
-                "python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
-                "python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
-                "python.linting.pylintPath": "/usr/local/py-utils/bin/pylint"
+                // "python.defaultInterpreterPath": "/usr/local/python/bin/python",
             }
         }
     },
