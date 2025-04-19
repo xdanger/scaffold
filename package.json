@@ -3,8 +3,8 @@
   "scripts": {
     "lint": "pretty-quick --check && biome check",
     "fix": "pretty-quick && biome check --write",
-    "lint:copywriting": "autocorrect --lint --strict && prettier --check **/*.{md,mdx,json}",
-    "fix:copywriting": "autocorrect --fix --strict && prettier --write **/*.{md,mdx,json}",
+    "lint:copywriting": "autocorrect --lint --strict && prettier --check \"**/*.{md,mdx,json}\"",
+    "fix:copywriting": "autocorrect --fix --strict && prettier --write \"**/*.{md,mdx,json}\"",
     "test": "bun run lint && bun run lint:copywriting",
     "prepare": "husky"
   },
