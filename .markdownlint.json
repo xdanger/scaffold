@@ -1,9 +1,0 @@
-{
-  "MD013": false,
-  "MD024": false,
-  "MD042": false,
-  "MD022": false,
-  "MD037": false,
-  "includes": ["**/*.md", "**/*.mdx"],
-  "excludes": ["node_modules/**"]
-}

@@ -1,0 +1,50 @@
+# Build outputs
+build
+coverage
+dist
+node_modules
+out
+public
+
+# Generated files
+.astro
+.cache
+.netlify
+.temp
+.tmp
+.vercel
+
+# Media and assets
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.avif
+*.mp4
+*.webm
+*.woff
+*.woff2
+*.eot
+*.ttf
+*.otf
+
+# Package manager
+bun.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.pnpm
+
+# Misc
+LICENSE
+.DS_Store
+
+# JavaScript
+*.js
+*.jsx
+*.ts
+*.tsx
+*.mjs
+*.cjs

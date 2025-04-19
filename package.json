@@ -1,15 +1,21 @@
 {
+  "packageManager": "bun@1.2.10",
   "scripts": {
-    "lint": "bunx biome check . && bunx markdownlint-cli2 .",
-    "fix": "bunx biome format --write . && bunx markdownlint-cli2 --fix .",
-    "lint:copywriting": "bunx autocorrect --lint .",
-    "fix:copywriting": "bunx autocorrect --fix . && bunx markdownlint-cli2 --fix .",
+    "lint": "pretty-quick --check && biome check",
+    "fix": "pretty-quick && biome check --write",
+    "lint:copywriting": "autocorrect --lint --strict && prettier --check **/*.{md,mdx,json}",
+    "fix:copywriting": "autocorrect --fix --strict && prettier --write **/*.{md,mdx,json}",
     "test": "bun run lint && bun run lint:copywriting",
     "prepare": "husky"
   },
-  "devDependencies": {
-    "biome": "^0.3.3",
-    "husky": "^9.1.7"
+  "dependencies": {
+    "bun": "^1.2.10"
   },
-  "packageManager": "bun@1.2.5"
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0-beta.1",
+    "autocorrect": "^1.2.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
+    "pretty-quick": "^4.1.1"
+  }
 }
