@@ -3,11 +3,11 @@
   "workspaces": {
     "": {
       "dependencies": {
-        "bun": "^1.2.10",
+        "autocorrect-node": "^2.14.0",
+        "bun": "^1.2.13",
       },
       "devDependencies": {
-        "@biomejs/biome": "^2.0.0-beta.1",
-        "autocorrect": "^1.2.0",
+        "@biomejs/biome": "^2.0.0-beta.5",
         "husky": "^9.1.7",
         "prettier": "^3.5.3",
         "pretty-quick": "^4.1.1",
@@ -55,7 +55,17 @@
 
     "@oven/bun-windows-x64-baseline": ["@oven/bun-windows-x64-baseline@1.2.13", "", { "os": "win32", "cpu": "x64" }, "sha512-Aiezu99fOUJJpzGuylOJryd6w9Syg2TBigHeXV2+RJsouBzvAnIEYIBA94ZspRq1ulD26Wmkk8Ae+jZ4edk9GA=="],
 
-    "autocorrect": ["autocorrect@1.2.0", "", { "dependencies": { "leven": "^2.0.0", "word-list": "^1.0.1" } }, "sha512-+RbvUM8d/V1e8xSOEW3oi0kWFe+T5WD+hGyqPaVKngEZW7vTFGSJOy+vvEa9PZeqIq5U9WHd9gX7hlsFKonaRg=="],
+    "autocorrect-node": ["autocorrect-node@2.14.0", "", { "optionalDependencies": { "autocorrect-node-darwin-arm64": "2.14.0", "autocorrect-node-darwin-x64": "2.14.0", "autocorrect-node-linux-x64-gnu": "2.14.0", "autocorrect-node-linux-x64-musl": "2.14.0", "autocorrect-node-win32-x64-msvc": "2.14.0" }, "bin": { "autocorrect": "cli.js" } }, "sha512-Pkdw3Hr1Wbtpm8f7KYOaPnHFa7TNVo9dyuOffVaNGN3iWWRBs011XBuCJUEmHV097kJkab94cs4P6KJ4pvI41g=="],
+
+    "autocorrect-node-darwin-arm64": ["autocorrect-node-darwin-arm64@2.14.0", "", { "os": "darwin", "cpu": "arm64" }, "sha512-l5IRTQz6zYAlkfEc5emIDXBkayD0MIwPPAVXCFMceFwyTNhAJ5veoKqRrsPuBVthIbfYKtAUs9oy9oFoHQn7bw=="],
+
+    "autocorrect-node-darwin-x64": ["autocorrect-node-darwin-x64@2.14.0", "", { "os": "darwin", "cpu": "x64" }, "sha512-vRO0lwfXff2Fs41NzdDqN5t4VQ03M0Xsn6Tk4OjMrbjoWJqaEq05KZOTSaSF/wEs/7E1VoaI9Kz+c0fqylVX4Q=="],
+
+    "autocorrect-node-linux-x64-gnu": ["autocorrect-node-linux-x64-gnu@2.14.0", "", { "os": "linux", "cpu": "x64" }, "sha512-v1y1wh340cbhrHSZZP0oPkvWUprDtUIwnBP69Bls27VhQ2ZyVV4eijDNOP//yGUyUunMB0rtWoZaBsq8ugt1Kg=="],
+
+    "autocorrect-node-linux-x64-musl": ["autocorrect-node-linux-x64-musl@2.14.0", "", { "os": "linux", "cpu": "x64" }, "sha512-3LifiLG61VIXBrOITpD/REcg/ZEUuLz/P2XUWMCfGqhzoUb8oFgM3o0A6extvIH2NefiHMndB9kNbfQjXCl3zA=="],
+
+    "autocorrect-node-win32-x64-msvc": ["autocorrect-node-win32-x64-msvc@2.14.0", "", { "os": "win32", "cpu": "x64" }, "sha512-OM6TeGUW0+4R9KtUYTYNEwlInd+b2kumw/B1HCbCzb1F7HpfaNxnZiMk1li0bdPPBDzD5YuzwM30VJZMCWIi5A=="],
 
     "bun": ["bun@1.2.13", "", { "optionalDependencies": { "@oven/bun-darwin-aarch64": "1.2.13", "@oven/bun-darwin-x64": "1.2.13", "@oven/bun-darwin-x64-baseline": "1.2.13", "@oven/bun-linux-aarch64": "1.2.13", "@oven/bun-linux-aarch64-musl": "1.2.13", "@oven/bun-linux-x64": "1.2.13", "@oven/bun-linux-x64-baseline": "1.2.13", "@oven/bun-linux-x64-musl": "1.2.13", "@oven/bun-linux-x64-musl-baseline": "1.2.13", "@oven/bun-windows-x64": "1.2.13", "@oven/bun-windows-x64-baseline": "1.2.13" }, "os": [ "linux", "win32", "darwin", ], "cpu": [ "x64", "arm64", ], "bin": { "bun": "bin/bun.exe", "bunx": "bin/bun.exe" } }, "sha512-EhP1MhFbicqtaRSFCbEZdkcFco8Ov47cNJcB9QmKS8U4cojKHfLU+dQR14lCvLYmtBvGgwv/Lp+9SSver2OPzQ=="],
 
@@ -64,8 +74,6 @@
     "husky": ["husky@9.1.7", "", { "bin": { "husky": "bin.js" } }, "sha512-5gs5ytaNjBrh5Ow3zrvdUUY+0VxIuWVL4i9irt6friV+BqdCfmV11CQTWMiBYWHbXhco+J1kHfTOUkePhCDvMA=="],
 
     "ignore": ["ignore@7.0.3", "", {}, "sha512-bAH5jbK/F3T3Jls4I0SO1hmPR0dKU0a7+SY6n1yzRtG54FLO8d6w/nxLFX2Nb7dBu6cCWXPaAME6cYqFUMmuCA=="],
-
-    "leven": ["leven@2.1.0", "", {}, "sha512-nvVPLpIHUxCUoRLrFqTgSxXJ614d8AgQoWl7zPe/2VadE8+1dpU3LBhowRuBAcuwruWtOdD8oYC9jDNJjXDPyA=="],
 
     "locate-path": ["locate-path@6.0.0", "", { "dependencies": { "p-locate": "^5.0.0" } }, "sha512-iPZK6eYjbxRu3uB4/WZ3EsEIMJFMqAoopl3R+zuq0UjcAm/MO6KCweDgPfP3elTztoKP3KtnVHxTn2NHBSDVUw=="],
 
@@ -88,8 +96,6 @@
     "tinyexec": ["tinyexec@0.3.2", "", {}, "sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA=="],
 
     "tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
-
-    "word-list": ["word-list@1.0.1", "", {}, "sha512-f9TaupdTMV4Rmf6l2vw1O7P6nSqE8mOdIbGWddjcWQ11JoIdn+IMu8yCxeSp0LrCMJG2Qi1KE3ZcVN/QEPiE7Q=="],
 
     "yocto-queue": ["yocto-queue@0.1.0", "", {}, "sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q=="],
   }
