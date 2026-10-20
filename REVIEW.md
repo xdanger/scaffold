@@ -1,7 +1,7 @@
 # Code Review Policy
 
 Repository-specific rules for automated code review. They extend the default
-policy from `krosdai/.github` and take precedence where the two conflict.
+policy from `xdanger/xdanger` and take precedence where the two conflict.
 
 ## Pinning upstream actions and reusable workflows
 
@@ -11,7 +11,7 @@ one of these trusted organizations:
 
 - `github`
 - `anthropics`
-- `krosdai`
+- `xdanger`
 
 Match the owner exactly: the segment before the first `/` in `uses:`. For these
 owners, do not report a tag reference as unpinned or as a supply-chain risk,
